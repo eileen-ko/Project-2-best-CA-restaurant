@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Best Restaurants in Santa Clara, San Mateo and San Francisco Counties</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <!--Overlay Image with Title -->
+    <div class="container bg-overlay">
+        <div class="row text-center">
+            <h1>Best Restaurants in<br>Santa Clara, San Mateo and San Francisco<br>Counties</h1>
+            <br><br>
+        </div>
+    </div>
+
+    <!--Grid Set-up for Search Button and Drop-down for Search Criterias (2 columns)-->
+    <div class="container" style="border:1px solid #cecece;">
+        <h3>Please enter your search criteria:</h3>
+        <div class="row">
+            <div class="col-md-2">
+                <h4>Select City</h4>
+                <!--<div id="selDataset, default:San Francisco"></div>-->    
+                <select id="selDataset" onchange="getData(this.value)">
+                    <option value="dataset16">San Francisco</option>
+                    <option value="dataset1">Belmont</option>
+                    <option value="dataset2">Brisbane</option>                  
+                </select>
+            </div>        
+            <!--Restaurant Category Drop-down-->
+            <div class="col-md-3">
+                <h4>Restaurant Category</h4>
+                <!--<div id="#category, default:All"></div>-->
+                <select id="selDataset" onchange="getData(this.value)">
+                    <option value="dataset1">Cuban</option>
+                    <option value="dataset2">Thai</option>
+                    <option value="dataset3">Peruvian</option>
+                </select>
+            </div>    
+            <div class="col-md-1">
+            <!--Search Button-->
+            <button type="button" class="btn btn-default">Search</button>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>    
+    </div>
+    <!--Grid Set-up for Visual Display Section (2 columns with the right one split into two rows-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6" style="border:1px solid #cecece;">
+                <div id="map">
+                    <h3>Locations of Top 10 Rated Restaurants (Place map here)</h3>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6" style="border:1px solid #cecece;">
+                <div id="top10-chart">
+                    <h3>Top 10 Rated Restaurants (Place chart here)</h3>
+                </div>
+                <!--<div id="users">
+                    <button class="sort" data-sort="Serene will place class name here">
+                        Sort
+                      </button>
+                </div>-->
+                <div id="top10-table">
+                    <h3>Top Restaurants with Most Rated Reviews (Place table here)</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr><th>Name</th><th>Category</th><th>Number of Reviews</th><th>Rating</th></tr>
+                        </thead>
+                    </table>    
+                </div>
+            </div>
+        </div>
+    </div>                    
+
+    <!--Dark Mode Script-->    
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
+    <script>
+    new Darkmode().showWidget();
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src=“https://d3js.org/d3.v4.js”></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="logic.js"></script><!--Edit this accordingly-->
+
+</body>
+
+</html>
